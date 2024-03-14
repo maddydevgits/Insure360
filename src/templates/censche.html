@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>this is central schemes page</p>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: url('{{ url_for("static",filename="sta.avif")}}');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .navbar {
+            background: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar a {
+            color: #fff !important;
+            text-decoration: none;
+            font-size: 1.8rem;
+            margin-left: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 720px; /* Adjusted margin to make space for navbar */
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            flex: 0 0 48%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: #2E3B4E;
+        }
+
+        p {
+            color: #394B5F;
+        }
+    </style>
+    <title>Government Schemes</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="#" style="color: #fff; font-size: 1.8rem;">Insure360</a>
+        <div class="navbar-buttons">
+            <a href="/schemes" class="btn btn-primary">Back</a>
+            <a href="/alogin">Home</a>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>Pradhan Mantri Fasal Bima Yojana (PMFBY)</h2>
+            <p><strong>Premium Money:</strong> 2% for kharif crops and 1.5% for rabi crops.</p>
+            <p><strong>Eligibility Schemes:</strong> All farmers, including loanee and non-loanee farmers, cultivating notified crops in notified areas are eligible.</p>
+            <p><strong>Benefits:</strong> PMFBY helps farmers manage the risks associated with farming, such as crop failure due to natural disasters or pests.</p>
+        </div>
+
+        <div class="card">
+            <h2>Pradhan Mantri Kisan Samman Nidhi (PM-Kisan)</h2>
+            <p><strong>Premium Money:</strong> ₹6000 per year in the bank account.</p>
+            <p><strong>Eligibility Schemes:</strong> Small and marginal farmers with landholding up to 2 hectares.</p>
+            <p><strong>Benefits:</strong> All qualified beneficiaries will get Rs 2000 quarterly amount.</p>
+        </div>
+
+        <div class="card">
+            <h2>National Agriculture Market (eNAM)</h2>
+            <p><strong>Premium Money:</strong> Minimum investment of ₹50 lakh.</p>
+            <p><strong>Eligibility Schemes:</strong> It offers a “plug-in” to any market yard existing in a State (whether regulated or private).</p>
+            <p><strong>Benefits:</strong> Facilitates better prices for a seller through transparent bidding, increased number of buyers from different markets, hence greater negotiation power.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kisan Credit Card (KCC) Scheme</h2>
+            <p><strong>Premium Money:</strong> Rs. 15 for a single-year policy.</p>
+            <p><strong>Eligibility Schemes:</strong> You must be 18 years or older and under 75 years of age to apply for a KCC.</p>
+            <p><strong>Benefits:</strong> Covered against financial losses of up to Rs. 50,000 against death, permanent total disability, and loss of limbs or eyes.</p>
+        </div>
+
+        <div class="card">
+            <h2>Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h2>
+            <p><strong>Premium Money:</strong> Rs. 50,000 crores over a five-year period.</p>
+            <p><strong>Eligibility Schemes:</strong> Small and marginal farmers are eligible for PMKSNY.</p>
+            <p><strong>Benefits:</strong> Developing water sources for guaranteed irrigation.</p>
+        </div>
+
+        <div class="card">
+            <h2>Paramparagat Krishi Vikas Yojana (PKVY)</h2>
+            <p><strong>Premium Money:</strong> The ratio of 60:40 by the Central and State Governments respectively.</p>
+            <p><strong>Eligibility Schemes:</strong> Aims at supporting and promoting organic farming, resulting in the improvement of soil health.</p>
+            <p><strong>Benefits:</strong> Provides school/college dropouts or unemployed youth holding a valid ID (Aadhar/PAN) and bank account a chance to get skilled and employed.</p>
+        </div>
+
+        <div class="card">
+            <h2>Rashtriya Krishi Vikas Yojana (RKVY)</h2>
+            <p><strong>Premium Money:</strong> 60:40 between Centre and States (90:10 for North Eastern States and Himalayan States).</p>
+            <p><strong>Eligibility Schemes:</strong> Under NMSA, financial assistance up to 50% of the cost, subject to a limit of RS. 5,000/- per hectare and Rs. 10,000/- per beneficiary, is provided for the promotion of organic inputs.</p>
+            <p><strong>Benefits:</strong> Provides funding up to ₹5 lakh (which is a 90% grant and 10% contribution to the incubate).</p>
+        </div>
+
+        <div class="card">
+            <h2>National Mission for Sustainable Agriculture (NMSA)</h2>
+            <p><strong>Premium Money:</strong> Under the allocation of PM-AASHA ₹28,107 crore till 2025-26.</p>
+            <p><strong>Eligibility Schemes:</strong> Agriculture with a special emphasis on soil & water conservation, water use efficiency, soil health management, and rainfed area development.</p>
+            <p><strong>Benefits:</strong> Recently launched government scheme that guarantees remunerative prices to the farmers for their produce.</p>
+        </div>
+
+        <div class="card">
+            <h2>Pradhan Mantri Annadata Aay SanraksHan Abhiyan (PM-AASHA)</h2>
+            <p><strong>Premium Money:</strong> The ratio of 60:40 by the Central and State Governments respectively.</p>
+            <p><strong>Eligibility Schemes:</strong> Agriculture with a special emphasis on soil & water conservation, water use efficiency, soil health management, and rainfed area development.</p>
+            <p><strong>Benefits:</strong> Recently launched government scheme that guarantees remunerative prices to the farmers for their produce.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

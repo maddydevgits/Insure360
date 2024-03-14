@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Schemes</title>
+    <style>
+        body {
+            background: url('{{ url_for("static",filename="apply.avif")}}') center/cover no-repeat fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar a {
+            color: rgb(0, 0, 0) !important;
+            text-decoration: none;
+            font-size: 1.8rem;
+            margin-left: 20px;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        select, input, button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="#" style="color: rgb(250, 243, 243); font-size: 1.8rem;">Insure360</a>
+        <div class="navbar-buttons">
+            <a href="/schemes" class="btn btn-primary">Back</a>
+            <a href="/alogin">Home</a>
+        </div>
+    </div>
+
+    <div class="glassmorphism">
+        <form action="/claimapply" method="POST">
+        <label for="dateOfCalamity">Date of Calamity:</label>
+        <input type="date" id="dateOfCalamity" name="dateOfCalamity">
+
+        <label for="schemeID">Scheme ID:</label>
+        <input type="text" id="schemeID" name="schemeID" placeholder="Enter Scheme ID">
+
+        <label for="farmerName">Farmer Name:</label>
+        <input type="text" id="farmerName" name="farmerName" placeholder="Enter Farmer Name">
+
+        <label for="farmerID">Farmer ID:</label>
+        <input type="text" id="farmerID" name="farmerID" placeholder="Enter Farmer ID">
+
+        <label for="bankAccount">Bank Account:</label>
+        <input type="text" id="bankAccount" name="bankAccount" placeholder="Enter Bank Account">
+
+        <label for="premiumAmount">Premium Amount Paid:</label>
+        <input type="text" id="premiumAmount" name="premiumAmount" placeholder="Enter Premium Amount">
+
+        <button type="submit">Claim</button>
+        <span style="color:red">{{msg}}</span>
+        </form>
+    </div>
+
+    <script>
+        function applyScheme() {
+            var dateOfCalamity = document.getElementById("dateOfCalamity").value;
+            var schemeID = document.getElementById("schemeID").value;
+            var farmerName = document.getElementById("farmerName").value;
+            var farmerID = document.getElementById("farmerID").value;
+
+            alert("Date of Calamity: " + dateOfCalamity + "\nScheme ID: " + schemeID + "\nFarmer Name: " + farmerName + "\nFarmer ID: " + farmerID);
+        }
+    </script>
+
+</body>
+</html>

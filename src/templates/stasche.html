@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: url('{{ url_for("static",filename="sta.avif")}}');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .navbar {
+            background: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar a {
+            color: #fff !important;
+            text-decoration: none;
+            font-size: 1.8rem;
+            margin-left: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 320px; /* Adjusted margin to make space for navbar */
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            flex: 0 0 48%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: #2E3B4E;
+        }
+
+        p {
+            color: #394B5F;
+        }
+    </style>
+    <title>Government Schemes</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="#" style="color: #fff; font-size: 1.8rem;">Insure360</a>
+        <div class="navbar-buttons">
+            <a href="/schemes" class="btn btn-primary">Back</a>
+            <a href="/alogin">Home</a>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h2>YSR Jagananna Saswatha Bhoomi</h2>
+            <p><strong>Eligibility Criteria:</strong> All farmers to provide ownership of their land in rural and urban areas</p>
+            <p><strong>Benefits:</strong> Records residents' property ownership, provides proof card, and offers loans for rural and urban development.</p>
+        </div>
+
+        <div class="card">
+            <h2>YSR Donna Baddie Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> All farmers repaying the same within one year</p>
+            <p><strong>Benefits:</strong> Interest subsidy provided to farmers availing crop loans.</p>
+        </div>
+
+        <div class="card">
+            <h2>Jagananna Herbs Lesotho Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> Financial stability for women</p>
+            <p><strong>Benefits:</strong> Scheme aimed at providing women empowerment and social stability for SC, ST, BC.</p>
+        </div>
+
+        <div class="card">
+            <h2>Free Crop Insurance Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> Farmers across the state, free crop insurance scheme with physical verification of crops & easy enrollment process</p>
+            <p><strong>Benefits:</strong> Protection of farmers against all excessive climate changes, natural calamities.</p>
+        </div>
+
+        <div class="card">
+            <h2>YSR Jalapeno Kala Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> Farmers can get benefits of free borewells drilling from the government, shortage of water and irrigation of 2.5 acres</p>
+            <p><strong>Benefits:</strong> Utilize of groundwater available for small and marginal farmers.</p>
+        </div>
+
+        <div class="card">
+            <h2>Agriculture Electricity Cash Transfer Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> Free power supply provided to the agriculture sector. The bill amount will be credited to the bank accounts.</p>
+            <p><strong>Benefits:</strong> Farming sector provides assistance in electricity bill payment and 2% limit 20,000 Crores as a loan.</p>
+        </div>
+
+        <div class="card">
+            <h2>Rythu Raksha Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> Small farmers, marginal and tenant farmers. This is all throughout Andhra Pradesh farmers only.</p>
+            <p><strong>Benefits:</strong> Provide financial assistance to the farmers to prevent suicide. Rs. 13,500 per year.</p>
+        </div>
+
+        <div class="card">
+            <h2>YSR Ruthy Bharos-PM Kosam Scheme</h2>
+            <p><strong>Eligibility Criteria:</strong> This provides financial assistance to the farmers.</p>
+            <p><strong>Benefits:</strong> Rs. 13,500 per year.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

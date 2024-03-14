@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+
+    <form action="/products" method="post">
+        <label for="selectOption">Select a location:</label>
+        <select id="selectOption" name="selectOption">
+            <option value="guntur">Guntur</option>
+            <option value="vjd">Vijayawada</option>
+            <option value="hyd">Hyderabad</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if selected_location %}
+        <h2>Products in {{ selected_location }}</h2>
+        {% if products %}
+            <ul>
+                {% for product in products %}
+                    <li>
+                        Product Name: {{ product.get('productname', 'N/A') }}<br>
+                        Shop Name: {{ product.get('shopname', 'N/A') }}<br>
+                        Shop ID: {{ product.get('shopid', 'N/A') }}<br>
+                        Location: {{ product.get('location', 'N/A') }}<br>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No products found for the selected location.</p>
+        {% endif %}
+    {% else %}
+        <p>Please select a location.</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page Table</title>
+    <style>
+        body {
+            background: url('{{ url_for("static",filename="apply.avif")}}') center/cover no-repeat fixed;
+            height: 100vh;
+            margin: 0;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        tr:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar {
+            background: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 1.8rem;
+            margin-left: 20px;
+        }
+
+        .navbar-buttons a {
+            color: #fff;
+            background-color:transparent;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .navbar-buttons a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="#" style="color: rgb(0, 0, 0); font-size: 1.8rem;">Insure360</a>
+        <div class="navbar-buttons">
+            <a href="/">Logout</a>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Scheme Name</th>
+                <th>Scheme Id</th>
+                <th>Farmer Name</th>
+                <th>Farmer Id</th>
+                <th>Bank Account</th>
+                <th>Premium Amount</th>
+                <th>Date</th>
+                <th>Scheme Blockchain Id</th>
+                <th>Farmer Email</th>
+                <th>Status of Scheme</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for i in data%}
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+                <td>{{i[5]}}</td>
+                <td>{{i[6]}}</td>
+                <td>{{i[7]}}</td>
+                <td>{{i[8]}}</td>
+                {%if i[9]==0 %}
+                    <td>Scheme Active</td>
+                {%else%}
+                    <td>Scheme Claimed </td>
+                {%endif%}
+            {%endfor%}
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+
+</html>
